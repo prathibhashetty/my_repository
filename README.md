@@ -21,3 +21,6 @@ Scaling: import cv2 import numpy as np src=cv2.imread('original.jpg',1) img=cv2.
 
 ![image](https://user-images.githubusercontent.com/75006493/104893799-e3b39e80-5999-11eb-9c87-6967c6ad1fb5.png)
 ![image](https://user-images.githubusercontent.com/75006493/104893986-207f9580-599a-11eb-8ede-4e5977902877.png)
+
+rotating: import cv2 import numpy as np src=cv2.imread('original.jpg') img=cv2.imshow('original.jpg',src) windowsname='image' image=cv2.rotate(src,cv2.ROTATE_90_CLOCKWISE) cv2.imshow(windowsname,image) c.waitKey(0) output
+
