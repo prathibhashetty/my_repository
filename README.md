@@ -7,3 +7,4 @@ To convert an image to grayscale in any of the Microsoft Office suite apps, righ
 
 import cv2 image=cv2.imread('original.jpg') grey_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) cv2.imwrite('original.jpg',image) cv2.imshow("org",image) cv2.imshow("gimg",grey_image) cv2.waitKey(0) cv2.destroyAllWindows() output:
 
+![image](https://user-images.githubusercontent.com/75006493/104893410-68ea8380-5999-11eb-8362-b3670f32e9cf.png)
