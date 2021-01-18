@@ -50,3 +50,4 @@ import cv2 img = cv2.imread('original.jpg') cv2.imshow('Input',img) cv2.waitKey(
 import numpy as np from PIL import Image import cv2 array = np.linspace(0,1,256256) mat = np.reshape(array,(256,256)) img = Image.fromarray(np.uint8(mat * 255) , 'L') img.show() cv2.waitKey(0) array = np.linspace(0,1,256256) mat = np.reshape(array,(256,256)) img = Image.fromarray( mat , 'L') img.show() cv2.waitKey(0) output:
 
 ![image](https://user-images.githubusercontent.com/75006493/104895351-c7b0fc80-599b-11eb-85db-c491030b0d81.png)
+
