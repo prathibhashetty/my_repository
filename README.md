@@ -45,3 +45,7 @@ import cv2 img = cv2.imread('original.jpg') cv2.imshow('Input',img) cv2.waitKey(
 
 ![image](https://user-images.githubusercontent.com/75006493/104895119-7e60ad00-599b-11eb-9e22-f6ef3ecb8348.png)
 
+6.DEVELOP A PROGRAM TO CREATE AN ARRAY FROM 2D ARRAY For a two-dimensional array, in order to reference every element, we must use two nested loops. This gives us a counter variable for every column and every row in the matrix. int cols = 10; int rows = 10; int [] [] myArray = new int [cols] [rows]; // Two nested loops allow us to visit every spot in a 2D array Creating Arrays. You can create an array by using the new operator with the following syntax − Syntax arrayRefVar = new dataType[arraySize]; The above statement does two things − It creates an array using new dataType[arraySize]. It assigns the reference of the newly created array to the variable arrayRefVar.
+
+import numpy as np from PIL import Image import cv2 array = np.linspace(0,1,256256) mat = np.reshape(array,(256,256)) img = Image.fromarray(np.uint8(mat * 255) , 'L') img.show() cv2.waitKey(0) array = np.linspace(0,1,256256) mat = np.reshape(array,(256,256)) img = Image.fromarray( mat , 'L') img.show() cv2.waitKey(0) output:
+
