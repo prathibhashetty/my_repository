@@ -31,3 +31,4 @@ rotating: import cv2 import numpy as np src=cv2.imread('original.jpg') img=cv2.i
 
 Mean is most basic of all statistical measure. Means are often used in geometry and analysis; a wide range of means have been developed for these purposes. In contest of image processing filtering using mean is classified as spatial filtering and used for noise reduction. import cv2 import os path='C:\picture\images' imgs=[] dirs=os.listdir(path) for file in dirs: fpat=path+"\"+file imgs.append(cv2.imread(fpat)) i=0 sum_img=[] for sum_img in imgs: read_imgs=imgs[i] sum_img=sum_img+read_imgs #cv2.imshow(dirs[i],imgs[i]) i=i+1 print(i) cv2.imshow('sum',sum_img) print(sum_img) cv2.imshow('mean',sum_img/i) mean=(sum_img/i) print(mean) cv2.waitKey() cv2.destroyAllwindows() output
 
+![image](https://user-images.githubusercontent.com/75006493/104894603-eb277780-599a-11eb-961b-040747a89be9.png)
