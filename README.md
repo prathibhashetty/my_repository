@@ -32,3 +32,10 @@ rotating: import cv2 import numpy as np src=cv2.imread('original.jpg') img=cv2.i
 Mean is most basic of all statistical measure. Means are often used in geometry and analysis; a wide range of means have been developed for these purposes. In contest of image processing filtering using mean is classified as spatial filtering and used for noise reduction. import cv2 import os path='C:\picture\images' imgs=[] dirs=os.listdir(path) for file in dirs: fpat=path+"\"+file imgs.append(cv2.imread(fpat)) i=0 sum_img=[] for sum_img in imgs: read_imgs=imgs[i] sum_img=sum_img+read_imgs #cv2.imshow(dirs[i],imgs[i]) i=i+1 print(i) cv2.imshow('sum',sum_img) print(sum_img) cv2.imshow('mean',sum_img/i) mean=(sum_img/i) print(mean) cv2.waitKey() cv2.destroyAllwindows() output
 
 ![image](https://user-images.githubusercontent.com/75006493/104894603-eb277780-599a-11eb-961b-040747a89be9.png)
+
+4.Develop a program to convert image to binary image and gray scale. Binary images are images whose pixels have only two possible intensity values. Numerically, the two values are often 0 for black, and either 1 or 255 for white. The main reason binary images are particularly useful in the field of Image Processing is because they allow easy separation of an object from the background.
+
+In digital photography, computer-generated imagery, and colorimetry, a grayscale or image is one in which the value of each pixel is a single sample representing only an amount of light; that is, it carries only intensity information. Grayscale images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray.
+
+import cv2 img = cv2.imread('original.jpg') cv2.imshow('Input',img) cv2.waitKey(0) grayimg=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) cv2.imshow('Grayscaleimage',grayimg) cv2.waitKey(0) ret, bw_img = cv2.threshold(img,127,255, cv2.THRESH_BINARY) cv2.imshow("Binary Image",bw_img) cv2.waitKey(0) cv2.destroyAllWindows() output
+
