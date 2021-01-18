@@ -40,3 +40,7 @@ In digital photography, computer-generated imagery, and colorimetry, a grayscale
 import cv2 img = cv2.imread('original.jpg') cv2.imshow('Input',img) cv2.waitKey(0) grayimg=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) cv2.imshow('Grayscaleimage',grayimg) cv2.waitKey(0) ret, bw_img = cv2.threshold(img,127,255, cv2.THRESH_BINARY) cv2.imshow("Binary Image",bw_img) cv2.waitKey(0) cv2.destroyAllWindows() output
 
 ![image](https://user-images.githubusercontent.com/75006493/104894842-32156d00-599b-11eb-8816-c354c494de1e.png)
+
+5.Develop a program to convert given color image to different color space. Color spaces are different types of color modes, used in image processing and signals and system for various purposes. The color spaces in image processing aim to facilitate the specifications of colors in some standard way. Different types of color spaces are used in multiple fields like in hardware, in multiple applications of creating animation, etc. import cv2 image=cv2.imread('original.jpg') cv2.imshow('pic',image) cv2.waitKey(0) yuv_img = cv2.cvtColor(image,cv2.COLOR_RGB2YUV) cv2.imshow('ychannel',yuv_img[:,:,0]) cv2.imshow('uchannel',yuv_img[:,:,1]) cv2.imshow('vchannel',yuv_img[:,:,2]) cv2.waitKey(0) hsv_img = cv2.cvtColor(image,cv2.COLOR_RGB2HSV) cv2.imshow('hchannel',hsv_img[:,:,0]) cv2.imshow('schannel',hsv_img[:,:,1]) cv2.imshow('vchannel',hsv_img[:,:,2]) cv2.waitKey(0) cv2.destroyAllWindows() output: 
+
+
