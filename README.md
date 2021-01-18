@@ -26,3 +26,8 @@ rotating: import cv2 import numpy as np src=cv2.imread('original.jpg') img=cv2.i
 
 ![image](https://user-images.githubusercontent.com/75006493/104894248-748a7a00-599a-11eb-9b7b-fb046c9fbaa4.png)
 ![image](https://user-images.githubusercontent.com/75006493/104894365-9dab0a80-599a-11eb-99ca-8636cdb3f9a1.png)
+
+3.Create a program to find sum and mean of a set of image. In digital image processing, the sum of absolute differences (SAD) is a measure of the similarity between image blocks. It is calculated by taking the absolute difference between each pixel in the original block and the corresponding pixel in the block being used for comparison
+
+Mean is most basic of all statistical measure. Means are often used in geometry and analysis; a wide range of means have been developed for these purposes. In contest of image processing filtering using mean is classified as spatial filtering and used for noise reduction. import cv2 import os path='C:\picture\images' imgs=[] dirs=os.listdir(path) for file in dirs: fpat=path+"\"+file imgs.append(cv2.imread(fpat)) i=0 sum_img=[] for sum_img in imgs: read_imgs=imgs[i] sum_img=sum_img+read_imgs #cv2.imshow(dirs[i],imgs[i]) i=i+1 print(i) cv2.imshow('sum',sum_img) print(sum_img) cv2.imshow('mean',sum_img/i) mean=(sum_img/i) print(mean) cv2.waitKey() cv2.destroyAllwindows() output
+
