@@ -113,5 +113,16 @@ Summed neighbors matrix:
  [23. 40. 27.]
  [17. 31. 19.]]
  
- 9.
+ 9.Develop a program to create the negation of a given image.
+ import cv2
+import numpy as np
+img=cv2.imread('rose.jpg')
+cv2.imshow('Original',img)
+cv2.waitKey(0)
+img_neg=255-img
+cv2.imshow('Negative',img_neg)
+cv2.waitKey(0)
+OUTPUT:
+
+
 
