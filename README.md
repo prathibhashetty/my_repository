@@ -51,3 +51,6 @@ import numpy as np from PIL import Image import cv2 array = np.linspace(0,1,2562
 
 ![image](https://user-images.githubusercontent.com/75006493/104895351-c7b0fc80-599b-11eb-85db-c491030b0d81.png)
 
+7.Develop a program to display THE NEIGHBOUR ELEMENTS OF A GIVEN MATRIX.
+
+
