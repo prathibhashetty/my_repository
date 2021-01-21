@@ -124,5 +124,8 @@ cv2.imshow('Negative',img_neg)
 cv2.waitKey(0)
 OUTPUT:
 
+![image](https://user-images.githubusercontent.com/75006493/105329521-17ebb280-5b86-11eb-8d28-0d36aae10dd6.png)
+
+
 
 
