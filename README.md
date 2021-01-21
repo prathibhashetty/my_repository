@@ -52,5 +52,66 @@ import numpy as np from PIL import Image import cv2 array = np.linspace(0,1,2562
 ![image](https://user-images.githubusercontent.com/75006493/104895351-c7b0fc80-599b-11eb-85db-c491030b0d81.png)
 
 7.Develop a program to display THE NEIGHBOUR ELEMENTS OF A GIVEN MATRIX.
+import numpy as np
+ 
+a = np.array([ [1, 2, 3,4,5,], [2,3, 4,5,6],[3,4,5,6,7],[4,5,6,7,8],[5,6,7,8,9]])
+ 
+print("array\n ", str(a));
+def neighbors(radius, rowNumber, columnNumber):
+    return[[a[i][j] if i>=0 and i<len(a) and j>=0 and j<len(a[0]) else 0
+            for j in range(columnNumber-1-radius, columnNumber+radius)]
+               for i in range(rowNumber-1-radius, rowNumber+radius)]
+neighbors(2,5,6)
 
+OUTPUT:
+array
+  [[1 2 3 4 5]
+ [2 3 4 5 6]
+ [3 4 5 6 7]
+ [4 5 6 7 8]
+ [5 6 7 8 9]]
+[[6, 7, 0, 0, 0],
+ [7, 8, 0, 0, 0],
+ [8, 9, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0]]
+ 
+ 8. Develop a program to calculate the sum of the neighbors of a given matrix.
+ def sumNeighbors(M,x,y):
+    l = []
+    for i in range(max(0,x-1),x+2): 
+        for j in range(max(0,y-1),y+2):
+            try:
+                t = M[i][j]
+                l.append(t)
+            except IndexError: 
+                pass
+    return sum(l)-M[x][y]
+import numpy as np
+
+M = [[1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]] 
+
+M = np.asarray(M)
+N = np.zeros(M.shape)
+
+for i in range(M.shape[0]):
+    for j in range(M.shape[1]):
+        N[i][j] = sumNeighbors(M, i, j)
+
+print ("Original matrix:\n", M)
+print ("Summed neighbors matrix:\n", N)
+
+OUTPUT:
+Original matrix:
+ [[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+Summed neighbors matrix:
+ [[11. 19. 13.]
+ [23. 40. 27.]
+ [17. 31. 19.]]
+ 
+ 9.
 
