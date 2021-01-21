@@ -127,4 +127,13 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/75006493/105329521-17ebb280-5b86-11eb-8d28-0d36aae10dd6.png)
 ![image](https://user-images.githubusercontent.com/75006493/105329805-69943d00-5b86-11eb-8fcf-06331053b1be.png)
 
+10. Develop a program to perform contrast enhancement of an image.
+from PIL import Image, ImageEnhance 
+im = Image.open("rose.jpg") 
+im.show()
+im3 = ImageEnhance.Contrast(im) 
+im3.enhance(5.0).show() 
+
+OUTPUT:
+
 
