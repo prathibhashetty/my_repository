@@ -137,4 +137,5 @@ im3.enhance(5.0).show()
 OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/75006493/105330321-00f99000-5b87-11eb-9375-f1b44e325b15.png)
+![image](https://user-images.githubusercontent.com/75006493/105330361-0a82f800-5b87-11eb-9128-935923ac6998.png)
 
